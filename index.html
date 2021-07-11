@@ -9,6 +9,7 @@
 
 <body>
 	<canvas id="loveCanvas"></canvas>
+
 	<div class="flex">
   		<div id="cubeWrap">
 			<div id="cube">
@@ -83,6 +84,21 @@
 		</div>
 	</div>
 
+	<div class="texttop">
+		<span>每天都是98%的甜+2%的可愛</span>
+	</div>
+	<div class="textbottom">
+		<span>所有的失戀都是在給真愛讓路</span>
+		<span>多愛自己一點，妳值得更好的</span>
+	</div>
+
+	<div class="bgImg">
+		<div class="pic"></div>
+		<div class="pic"></div>
+		<div class="pic"></div>
+		<div class="pic"></div>
+	</div>
+
   <script>
   	function showLove() {
 		var c = document.querySelector('#loveCanvas');
@@ -107,11 +123,12 @@
 
 		let x = 1;
   		let showCenterPic2 = false;
-		setInterval(function(){
+		/*setInterval(function(){
     	  const deg = (x++) * 3;
     	  // console.log(deg)
-		    photosDom.style.transform = "rotateX(-20deg) rotateY("+ deg +"deg)";
-		}, 100);
+		   photosDom.style.transform = "rotateX(-20deg) rotateY("+ deg +"deg)";
+		}, 200);*/
+		//photosDom.style.transform = "rotateX(-20deg) rotateY("+ deg +"deg)";
 	}
 	spinAround();
 	

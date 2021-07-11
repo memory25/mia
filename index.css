@@ -17,6 +17,7 @@ body{
   left: 50%;
   top: 50%;
   transform: translate(-50%,-50%);
+  z-index: 10
 }
 
 #photosWrap {
@@ -34,12 +35,22 @@ body{
   margin: 0 auto;
   transform-style: preserve-3d;
   /*border: 1px solid #ccc;*/
+  animation: rotatePhoto 30s linear infinite;
+}
+
+@keyframes rotatePhoto {
+  from {
+    transform: rotateX(-25deg) rotateY(0deg)
+  }
+  to {
+    transform: rotateX(-25deg) rotateY(360deg)
+  }
 }
 
 #photos .pic {
   position: absolute;
   width: 100%;
-  opacity: 0.7;
+  opacity: 0.9;
   -webkit-box-reflect: below 3px -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0.5));
 }
 
@@ -177,4 +188,259 @@ body{
 }
 #cube:hover .out_bottom {
   transform: rotateX(-90deg) translateZ(200px);
+}
+
+
+.texttop {
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	color: #fff;
+	font-size: 30px;
+	top: 0;
+	left: 50%;
+	transform: translate(-50%, 150%);
+	animation: fadein 10s linear;
+}
+
+.textbottom {
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	color: #fff;
+	font-size: 30px;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, 350%);
+	animation: fadein 10s linear;
+}
+
+@keyframes fadein {
+  from {
+   	opacity: 0
+  }
+  to {
+    opacity: 1
+  }
+}
+
+
+.bgImg {
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	position: absolute;
+	opacity: 0.9;
+	pointer-events: none;
+}
+
+.bgImg .pic {
+	position: absolute;
+	width: 35%;
+	height: 40%;
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+.bgImg .pic:nth-of-type(1) {
+	top: 0;
+	left: 0;
+	animation: bg1Frame 20s linear infinite;
+	background-position: left;
+}
+.bgImg .pic:nth-of-type(2) {
+	top: 0;
+	right: 0;
+	animation: bg2Frame 20s linear infinite;
+	background-position: right;
+}
+.bgImg .pic:nth-of-type(3) {
+	bottom: 0;
+	left: 0;
+	animation: bg3Frame 20s linear infinite;
+	background-position: left;
+}
+.bgImg .pic:nth-of-type(4) {
+	bottom: 0;
+	right: 0;
+	animation: bg4Frame 20s linear infinite;
+	background-position: right;
+}
+@keyframes bg1Frame {
+  0% {
+   	background-image: url(./imgs/b1.jpg);
+  }
+  7% {
+   	background-image: url(./imgs/b1.jpg);
+  }
+  14% {
+   	background-image: url(./imgs/b2.jpg);
+  }
+  21% {
+   	background-image: url(./imgs/b2.jpg);
+  }
+  28% {
+   	background-image: url(./imgs/b3.jpg);
+  }
+  35% {
+   	background-image: url(./imgs/b3.jpg);
+  }
+  42% {
+   	background-image: url(./imgs/b4.jpg);
+  }
+  49% {
+   	background-image: url(./imgs/b4.jpg);
+  }
+  56% {
+   	background-image: url(./imgs/b5.jpg);
+  }
+  63% {
+   	background-image: url(./imgs/b5.jpg);
+  }
+  70% {
+   	background-image: url(./imgs/b6.jpg);
+  }
+  77% {
+   	background-image: url(./imgs/b6.jpg);
+  }
+  84% {
+   	background-image: url(./imgs/b7.jpg);
+  }
+  100% {
+   	background-image: url(./imgs/b7.jpg);
+  }
+}
+
+@keyframes bg2Frame {
+  0% {
+   	background-image: url(./imgs/b8.jpg);
+  }
+  7% {
+   	background-image: url(./imgs/b8.jpg);
+  }
+  14% {
+   	background-image: url(./imgs/b9.jpg);
+  }
+  21% {
+   	background-image: url(./imgs/b9.jpg);
+  }
+  28% {
+   	background-image: url(./imgs/b10.jpg);
+  }
+  35% {
+   	background-image: url(./imgs/b10.jpg);
+  }
+  42% {
+   	background-image: url(./imgs/b11.jpg);
+  }
+  49% {
+   	background-image: url(./imgs/b11.jpg);
+  }
+  56% {
+   	background-image: url(./imgs/b12.jpg);
+  }
+  63% {
+   	background-image: url(./imgs/b12.jpg);
+  }
+  70% {
+   	background-image: url(./imgs/b13.jpg);
+  }
+  77% {
+   	background-image: url(./imgs/b13.jpg);
+  }
+  84% {
+   	background-image: url(./imgs/b14.jpg);
+  }
+  100% {
+   	background-image: url(./imgs/b14.jpg);
+  }
+}
+
+@keyframes bg3Frame {
+  0% {
+   	background-image: url(./imgs/b15.jpg);
+  }
+  7% {
+   	background-image: url(./imgs/b15.jpg);
+  }
+  14% {
+   	background-image: url(./imgs/b16.jpg);
+  }
+  21% {
+   	background-image: url(./imgs/b16.jpg);
+  }
+  28% {
+   	background-image: url(./imgs/b17.jpg);
+  }
+  35% {
+   	background-image: url(./imgs/b17.jpg);
+  }
+  42% {
+   	background-image: url(./imgs/b18.jpg);
+  }
+  49% {
+   	background-image: url(./imgs/b18.jpg);
+  }
+  56% {
+   	background-image: url(./imgs/b19.jpg);
+  }
+  63% {
+   	background-image: url(./imgs/b19.jpg);
+  }
+  70% {
+   	background-image: url(./imgs/b20.jpg);
+  }
+  77% {
+   	background-image: url(./imgs/b20.jpg);
+  }
+  84% {
+   	background-image: url(./imgs/b21.jpg);
+  }
+  100% {
+   	background-image: url(./imgs/b21.jpg);
+  }
+}
+
+@keyframes bg4Frame {
+  0% {
+   	background-image: url(./imgs/b22.jpg);
+  }
+  7% {
+   	background-image: url(./imgs/b22.jpg);
+  }
+  14% {
+   	background-image: url(./imgs/b23.jpg);
+  }
+  21% {
+   	background-image: url(./imgs/b23.jpg);
+  }
+  28% {
+   	background-image: url(./imgs/b24.jpg);
+  }
+  35% {
+   	background-image: url(./imgs/b24.jpg);
+  }
+  42% {
+   	background-image: url(./imgs/b25.jpg);
+  }
+  49% {
+   	background-image: url(./imgs/b25.jpg);
+  }
+  56% {
+   	background-image: url(./imgs/b26.jpg);
+  }
+  63% {
+   	background-image: url(./imgs/b26.jpg);
+  }
+  70% {
+   	background-image: url(./imgs/b27.jpg);
+  }
+  77% {
+   	background-image: url(./imgs/b27.jpg);
+  }
+  84% {
+   	background-image: url(./imgs/b28.jpg);
+  }
+  100% {
+   	background-image: url(./imgs/b28.jpg);
+  }
 }
